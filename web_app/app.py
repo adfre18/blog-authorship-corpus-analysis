@@ -9,6 +9,14 @@ st.set_page_config(layout="wide") # Use wider layout
 # Set consistent plot style
 sns.set_theme(style="whitegrid")
 
+# --- Helper Function to Create Plots ---
+# This helps avoid matplotlib state issues in Streamlit
+def create_plot(plot_func, *args, **kwargs):
+    """Creates a matplotlib plot in a new figure."""
+    fig, ax = plt.subplots()
+    plot_func(*args, **kwargs, ax=ax)
+    return fig
+
 # --- Streamlit App ---
 st.title("📊 Dataset Analysis")
 # button for refreshing data
