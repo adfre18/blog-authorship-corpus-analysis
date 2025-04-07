@@ -5,7 +5,17 @@ import json
 # Flask server URL
 URL = "http://81.201.57.116:5008"
 
-def send_image_to_server(task_number: int, image_path: str):
+def send_image_to_server(task_number: int, image_path: str) -> str:
+    """
+    Send an image to the server for processing and get the response.
+
+    Args:
+        task_number (int): The task number to identify the type of analysis.
+        image_path (str): The path to the image file.
+
+    Returns:
+        str: The response from the server.
+    """
     # Load and encode image to base64
     with open(image_path, "rb") as image_file:
         image_base64 = base64.b64encode(image_file.read()).decode("utf-8")
@@ -29,6 +39,6 @@ def send_image_to_server(task_number: int, image_path: str):
 
     # Print the response
     if response.ok:
-        return f'🧠 GPT Response:\n {response.json()["response"]}',
+        return f'🧠 GPT Response:\n {response.json()["response"]}'
     else:
         return f'❌ Error: {response.status_code}, {response.text}'
