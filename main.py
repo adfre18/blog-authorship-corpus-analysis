@@ -16,10 +16,10 @@ def main():
     df = load_dataset_to_dataframe(path)
 
     # iterate over all tasks
-    #for task in [Task1(), Task2(), Task3()]:
-    #    logger.info(f'Starting task: {task.__class__.__name__} ...')
-    #    task.run(df)
-    #    logger.info(f'Finished task: {task.__class__.__name__} ...')
+    for task in [Task1(), Task2(), Task3()]:
+        logger.info(f'Starting task: {task.__class__.__name__} ...')
+        task.run(df)
+        logger.info(f'Finished task: {task.__class__.__name__} ...')
 
     logger.info('All tasks completed successfully!')
 
