@@ -8,7 +8,7 @@ docker build -t blog-authorship-corpus-analysis .
 ```
 # How to start the Docker Image
 ```
-docker run --rm blog-authorship-corpus-analysis
+docker run -p 8501:8501 blog-authorship-corpus-analysis
 ```
 
 # 🧠 Script Overview
