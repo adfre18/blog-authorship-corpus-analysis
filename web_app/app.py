@@ -96,7 +96,7 @@ with tab2:
                 if genai_ask1:
                     with st.spinner('Getting response'):
                         text_response_1 = send_image_to_server(task_number=1, image_path='data/pie_chart.png')
-                        gender_interpretation = st.write(text_response_1[0])
+                        gender_interpretation = st.write(text_response_1)
 
     with expander2:
         st.header("2. Top 10 topics")
@@ -131,7 +131,7 @@ with tab2:
             if genai_ask2:
                 with st.spinner('Getting response'):
                     text_response_2 = send_image_to_server(task_number=2, image_path='data/topics_chart.png')
-                    topics_interpretation = st.write(text_response_2[0])
+                    topics_interpretation = st.write(text_response_2)
 
     with expander3:
         st.header("3. Heatmap of top 10 topics vs. zodiac signs")
@@ -183,5 +183,5 @@ with tab2:
             if genai_ask3:
                 with st.spinner('Getting response'):
                     text_response_3 = send_image_to_server(task_number=3, image_path='data/topics_heatmap.png')
-                    heatmap_interpretation = st.write(text_response_3[0])
+                    heatmap_interpretation = st.write(text_response_3)
 
