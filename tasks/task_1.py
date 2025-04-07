@@ -18,8 +18,10 @@ class Task1(Task):
     Methods:
         preprocess_data(data: DataFrame) -> list[str]:
             Preprocess the data for task 1. Applying filters for gender and age.
+            
         _task_method(texts: list[str]) -> str:
             Process the texts to find the most common words across selected texts.
+            
         prepare_string_output_format(data: list[tuple]) -> str:
             Prepare the output format for the task.
     """
