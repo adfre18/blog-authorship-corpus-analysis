@@ -50,16 +50,17 @@ def send_image_to_server(task_number: int, image_path: str) -> str:
         "prompt": prompt,
         "image_base64": image_base64
     }
-
-    # Send the POST request
-    response = requests.post(URL, json=payload)
-
-    # Print the response
-    if response.ok:
-        return f'🧠 GPT Response:\n {response.json()["response"]}'
-    else:
-        return f'❌ Error: {response.status_code}, {response.text}'
-
+    try:
+        # Send the POST request
+        response = requests.post(URL, json=payload)
+    
+        # Print the response
+        if response.ok:
+            return f'🧠 GPT Response:\n {response.json()["response"]}'
+        else:
+            return f'❌ Error: {response.status_code}, {response.text}'
+    except requests.exceptions.RequestException as e:
+        return f'❌ Request failed: {str(e)}'
 
 # --- Streamlit App ---
 st.title("📊 Dataset Analysis")
