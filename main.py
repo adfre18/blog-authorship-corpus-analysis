@@ -6,6 +6,15 @@ import subprocess
 
 
 def main():
+    """
+    Main function to run the tasks and start the Streamlit app.
+    
+    Args:
+        None
+        
+    Returns:
+        None
+    """
     logger.info('Starting the main function...')
     logger.info('Downloading the dataset...')
     # Download latest version of the dataset
