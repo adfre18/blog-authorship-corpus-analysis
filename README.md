@@ -23,4 +23,4 @@ Word Similarity
 Dollar Amount Extraction
 - It calculates the total sum of all dollar amounts mentioned in the texts.
 
-After completing these tasks, a Streamlit web app is launched to display the results along with visualizations for additional tasks.
+After completing these tasks, a Streamlit web app is launched to display the results and visualizations for additional tasks. Additionally, you can use an AI model to give you a summary of the graphs.
